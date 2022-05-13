@@ -14,8 +14,10 @@ body {
 }
 
 .slider {
-  width: 70%;
-  height: 35rem;
+  width: 80vw;
+  height: 42vw;
+  max-width: 80rem;
+  max-height: 42rem;
   margin-top: 5rem;
   margin-left: auto;
   margin-right: auto;
@@ -148,4 +150,27 @@ body {
 
 #radio4:checked~.lower .captions #caption4 {
   transform: translateY(-300%);
+}
+
+@media(max-width: 767.5px) {
+  .slider {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .slides {
+    height: 50%;
+  }
+
+  .lower {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 1.2rem;
+  }
+
+  .captions {
+    font-size: 1.1rem;
+    align-self: flex-start;
+    order: 2;
+  }
 }
