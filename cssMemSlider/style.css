@@ -3,40 +3,62 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 .radio {
   display: none;
 }
-
 .control {
   padding: .45rem;
   display: inline-block;
   cursor: pointer;
 }
-
 .control-dash {
   width: 1.4rem;
   height: .45rem;
   background-color: #1782ff;
   transition: 0.3s;
 }
-
 .control:hover .control-dash {
   opacity: 0.5;
 }
-
 .control:active .control-dash {
   background-color: #a1f0bf
+}
+
+.slider {
+  background-color: #ddd;
+  width: 70%;
+  height: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 75%;
+  display: flex;
+}
+
+.slide {
+  width: 100%;
+
+}
+.slides .image {
+  width: 100%;
+  height: 100%;
+}
+
+.captions {
+  height: 1.2em;
+  overflow: hidden;
 }
 
 #radio1:checked~#control1 .control-dash {
   background-color: #34e076;
 }
-
 #radio2:checked~#control2 .control-dash {
   background-color: #34e076;
 }
-
 #radio3:checked~#control3 .control-dash {
   background-color: #34e076;
 }
