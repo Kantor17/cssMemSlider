@@ -4,8 +4,59 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #313131;
+  color: white;
+}
+
 .radio {
   display: none;
+}
+
+.slider {
+  width: 70%;
+  height: 35rem;
+  margin-top: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  background-color: #313131;
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  height: 80%;
+  margin-bottom: 1.2rem;
+}
+
+.slide {
+  width: 100%;
+  transition: 1.2s;
+}
+
+#slide1 {
+  transform: translateX(100%);
+}
+
+#slide3 {
+  transform: translateX(-100%);
+}
+
+#slide4 {
+  transform: translateX(-200%);
+}
+
+.slides .image {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .control {
@@ -29,45 +80,9 @@
   background-color: #a1f0bf
 }
 
-.slider {
-  background-color: #ddd;
-  width: 70%;
-  height: 40rem;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-}
-
-.slides {
-  width: 400%;
-  height: 75%;
-  display: flex;
-}
-
-.slide {
-  width: 100%;
-  transition: 1.2s;
-}
-
-#slide1 {
-  transform: translateX(100%);
-}
-
-#slide3 {
-  transform: translateX(-100%);
-}
-
-#slide4 {
-  transform: translateX(-200%);
-}
-
-.slides .image {
-  width: 100%;
-  height: 100%;
-}
-
 .captions {
-  height: 1.2em;
+  font-size: 1.2rem;
+  height: 1.1em;
   overflow: hidden;
 }
 
@@ -87,19 +102,19 @@
   transform: translateY(-200%);
 }
 
-#radio1:checked~.controls #control1 .control-dash {
+#radio1:checked~.lower .controls #control1 .control-dash {
   background-color: #34e076;
 }
 
-#radio2:checked~.controls #control2 .control-dash {
+#radio2:checked~.lower .controls #control2 .control-dash {
   background-color: #34e076;
 }
 
-#radio3:checked~.controls #control3 .control-dash {
+#radio3:checked~.lower .controls #control3 .control-dash {
   background-color: #34e076;
 }
 
-#radio4:checked~.controls #control4 .control-dash {
+#radio4:checked~.lower .controls #control4 .control-dash {
   background-color: #34e076;
 }
 
@@ -119,18 +134,18 @@
   transform: translateX(-300%);
 }
 
-#radio1:checked~.captions #caption1 {
+#radio1:checked~.lower .captions #caption1 {
   transform: translateY(0);
 }
 
-#radio2:checked~.captions #caption2 {
+#radio2:checked~.lower .captions #caption2 {
   transform: translateY(-100%);
 }
 
-#radio3:checked~.captions #caption3 {
+#radio3:checked~.lower .captions #caption3 {
   transform: translateY(-200%);
 }
 
-#radio4:checked~.captions #caption4 {
+#radio4:checked~.lower .captions #caption4 {
   transform: translateY(-300%);
 }
