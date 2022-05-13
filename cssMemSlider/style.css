@@ -71,6 +71,22 @@
   overflow: hidden;
 }
 
+.caption {
+  transition: 1.2s;
+}
+
+#caption1 {
+  transform: translateY(100%);
+}
+
+#caption3 {
+  transform: translateY(-100%);
+}
+
+#caption4 {
+  transform: translateY(-200%);
+}
+
 #radio1:checked~.controls #control1 .control-dash {
   background-color: #34e076;
 }
@@ -101,4 +117,20 @@
 
 #radio4:checked~.slides #slide4 {
   transform: translateX(-300%);
+}
+
+#radio1:checked~.captions #caption1 {
+  transform: translateY(0);
+}
+
+#radio2:checked~.captions #caption2 {
+  transform: translateY(-100%);
+}
+
+#radio3:checked~.captions #caption3 {
+  transform: translateY(-200%);
+}
+
+#radio4:checked~.captions #caption4 {
+  transform: translateY(-300%);
 }
